@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		用友-首页
+	</title>
+	<style>
+	#headerbg{
+		height: 120px;
+		background: url(images/headerbg.jpg) repeat-x center top;
+	}
+	#header{
+		position: relative;
+		margin: 0 auto;
+		padding-top: 87px
+		;width: 1000px;
+	}
+	#logo{
+		position: absolute;
+		top: 14px;
+		left: 13px;
+	}
+	#search{
+		position: absolute;
+		top: 40px;
+		left: 108px;
+		width: 146px;
+		height: 20px;
+		background: url(images/searchbg.jpg) no-repeat 0 0;
+	}
+	.txtsearch{
+		margin: 0 0 0 10px;
+		padding: 0;
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		border: none;
+		background: none;
+	}
+	.btnsearch{
+		margin: 0;
+		padding: 0;
+		width: 20px;
+		height: 20px;
+		border: none;
+		background: none;
+	}
+	#lianjie{
+		position: absolute;
+		top: 40px;
+		left: 265px;
+		font: 12px/18px "微软雅黑", "黑体";
+		color: #969696;
+	}
+	a.aa1:link, a.aa1:visited{
+		padding-right: 15px;
+		font: 12px/18px "微软雅黑", "黑体";
+		color: #000;
+	}
+	a.a2:link, a.a2:visited{
+		padding-right: 15px;
+		font: 12px/18px "微软雅黑", "黑体";
+		color: #969696;
+		background: url(images/iconsanjiao.jpg) no-repeat right center;
+	}
+	#lianjie2{
+		position: absolute;
+		top: 40px;
+		left: 622px;
+	}
+	#yp_sy_nav{
+		position: absolute;
+		top: 15px;
+		left: 120px;
+		width: 250px;
+		display: none;
+		background-color: #fff;
+		z-index: 9999;
+	}    
+	#showhl1:hover + #yp_sy_nav{
+		display: block;
+	}
+	#yp_sy_nav:hover {display: block;}
+	#yp_sy_nav ul li{
+		background-color: #fff;
+		float: left;
+		width: 65px;
+		background: #f5f5f5;
+		border-bottom: solid 1px #e7e3e3;
+		font-size: 12px;
+		font-family: "宋体";
+	}
+	#yp_sy_nav ul a{
+		background-color: #fff;
+		cursor: pointer;
+		display: block;
+		width: 60px;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#yp_sy_nav ul a:link{
+		background-color: #fff;
+		cursor: pointer;
+		color: #848484;
+		text-decoration: none;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+	#yp_sy_nav ul a:visited{
+		background-color: #fff;
+		cursor: pointer;
+		color: #848484;
+		text-decoration: none;
+	}
+	#yp_sy_nav ul a:hover{
+		background-color: #fff;
+		cursor: pointer;
+		color: #848484;
+		text-decoration: none;
+		font-weight: normal;
+		background: #fff;
+	}
+	#yp_sy_nav ul p{
+		background-color: #fff;
+		width: 240px;
+		text-align: left;
+		float: left;
+		padding-left: 3px;
+		height: auto;
+		margin: 0 auto;
+		color: #848484;
+		text-decoration: none;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+	#yp_sy_nav ul p span{
+		float: left;
+		padding: 0 3px;
+		color: #848484;
+		text-decoration: none;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: normal;
+	}
+	#yp_sy_nav ul p a{
+		background-color: #fff;
+		cursor: pointer;
+		color: #848484;
+		text-decoration: none;
+		text-align: center;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#yp_sy_nav ul p b{
+		background-color: #fff;
+		color: #848484;
+		text-decoration: none;
+		text-align: center;
+		line-height: 30px;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	#nav{
+		margin: 0 auto;
+		width: 1000px;
+	}
+	#navlist{
+		margin:0;
+	}
+	#navlist li{
+		float: left;
+		display: inline;
+	}
+	#navlist a:link, #navlist a:visited{
+		display: block;
+		padding: 1px 13px 0;
+		font: 14px/33px "微软雅黑", "黑体";
+		color: #505050;
+	}
+	#navlist a.current:link, #navlist a.current:visited, #navlist a:hover{
+		padding: 0 12px 0;
+		color: #e90101;
+		background: url(images/hero_bgnoise.png);
+		border-left: 1px solid #b3b3b3;
+		border-right: 1px solid #b3b3b3;
+	}
+	.navcol3{
+		background: url(images/hero_col3.png) repeat-y 0 0;
+	}
+	.navcol4{
+		background: url(images/hero_col4.png) repeat-y 0 0;
+	}
+	#navconlistbg{
+		position: absolute;
+		margin-top: -1px;
+		width: 100%;
+		background: #eee url(images/hero_bgnoise.png);
+		box-shadow: 0px 3px 3px #999;
+		z-index: 9999;
+	}
+	#navconlist{
+		margin: 0 auto;
+		width: 1000px;
+	}
+
+#banner
+{
+    position: relative;
+    width: 100%;
+    height: 390px;
+    border-bottom: 3px solid #cbcbcb;
+    overflow: hidden;
+}
+#bannerlist
+{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -1000px;
+    width: 100%;
+}
+
+    #bannerlist li
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+        #bannerlist li.current
+        {
+            display: block;
+        }
+
+.bannertit
+{
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    margin-left: -65px;
+}
+#bannerbtndw
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: 200px;
+}
+
+
+
+    #bannerbtn li
+    {
+        float: left;
+        margin: 2px 10px 2px 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 7px;
+        background: #adadad;
+        cursor: pointer;
+    }
+
+        #bannerbtn li.current
+        {
+            margin: 0 8px 0 0;
+            background: none;
+            border: 2px solid #d20919;
+        }
+
+
+
+#content
+{
+    margin: 15px auto 0;
+    width: 1000px;
+}
+#content
+{
+    margin: 15px auto 0;
+    width: 1000px;
+}
+
+    #content dt
+    {
+        font: 14px/24px "微软雅黑", "黑体";
+        color: #1a1a1a;
+    }
+
+    #content dd a:link, #content dd a:visited
+    {
+        font: 13px/26px "微软雅黑", "黑体";
+        color: #777777;
+    }
+
+#big
+{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    padding: 15px 0 0 20px;
+    height: 159px;
+    border: 1px solid #dddddd;
+    background: #fff url(images/hero_pic1.jpg) no-repeat;
+}
+
+#mid
+{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    padding: 15px 0 0 20px;
+    height: 159px;
+    border: 1px solid #dddddd;
+    background: #fff url(images/hero_pic2.jpg) no-repeat;
+}
+
+#app
+{
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    padding: 15px 0 0 20px;
+    height: 159px;
+    border: 1px solid #dddddd;
+    background: #fff url(images/hero_pic3.jpg) no-repeat;
+}
+
+#act
+{
+    position: relative;
+    float: right;left: -12%;
+    padding: 15px 0 0 20px;
+    height: 159px;
+    border: 1px solid #dddddd;
+    background: #fff url(images/hero_pic4.jpg) no-repeat;
+}
+
+#content .more
+{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+    #content .more a:link, #content .more a:visited
+    {
+        font: 14px/18px "微软雅黑", "黑体";
+        color: #e93e47;}
+	</style>
+</head>
+<body>
+	<div id="headerbg">
+		<div id="header">
+			<div id="logo">
+				<img src="images/logo.jpg" alt="" width="73" height="48" />
+			</div>
+			<div id="search">
+				<input	type="text" class="txtsearch" name="txtfield" id="search_text_chenhhai">
+				<input name="button" type="submit" class="btnsearch" id="button" value=" " onclick="open_newWindow()">
+			</div>
+			<div id="lianjie">
+				客户专线：4006-600-588    
+				<a href="http://weibo.com/yongyou" target="_blank" class="aa1">集团官方微博
+				</a>
+				<a href="#" class="a2" id="showhl1">LANGUAGE
+				</a>
+				<div id="yp_sy_nav" >
+				<ul style="width: 240px; float: left;">
+					<li style="width: 240px; text-align: left;">
+						<p>
+							<b style="width: 55px; text-align: left; float: left; display: block; font-size: 12px;
+							font-family: '宋体';">English</b>
+							<span>|</span>
+							<a target="_blank" href="http://www.yonyou.com.hk/"
+							style="width: 104px; font-size: 12px; text-align: left; float: left; display: block;
+							font-weight: normal; font-family: '宋体';">Hong Kong<font style="padding: 0 2px;">|</font>Macau
+						</a>
+						<span>|</span>
+						<a
+						target="_blank" href="http://www.yonyou.com.sg/" style="width: 55px; text-align: left;
+						float: left; font-size: 12px; font-weight: normal; font-family: '宋体'; display: block;">Singapore
+					</a>
+				</p>
+			</li>
+			<li style="width: 240px; text-align: left; font-family: '宋体';">
+				<p>
+					<b style="width: 55px; text-align: left; float: left; display: block; font-size: 12px;
+					font-family: '宋体';">Japanese</b><span>|</span><a target="_blank" href="http://www.ufida.co.jp/"
+					style="width: 62px; text-align: left; float: left; display: block; font-size: 12px;
+					font-weight: normal; font-family: '宋体';">日本</a></p>
+				</li>
+				<li style="width: 240px; text-align: left;">
+					<p>
+						<b style="width: 55px; text-align: left; float: left; display: block; font-size: 12px;
+						font-family: '宋体';">Taiwan</b><span>|</span><a target="_blank" href="http://www.yonyou.com.tw/"
+						style="width: 62px; text-align: left; float: left; display: block; font-size: 12px;
+						font-weight: normal; font-family: '宋体';">台灣</a></p>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div id="lianjie2">
+				<a href="#" class="a2" id="showhl2">集团成员
+				</a>
+				<a href="#" class="a2" id="showhl3">用友股份营销机构
+				</a>
+				<a href="http://www.yonyouup.cn/yyup/distribute/hbfb21.html" target="_blank" class="aa1">用友优普营销机构
+				</a>
+			</div>
+
+			<div id="nav">
+				<ul id="navlist">
+					<li><a id="home" href="/index.aspx" style=color:red>首 页</a></li>
+					<li><a id="Solutions" href="/Solutions/index.aspx">解决方案</a></li>
+					<li><a id="product" href="/product/index.aspx">产品技术</a></li>
+					<li><a id="huoban" href="#">伙 伴</a></li>
+					<li><a id="service" href="/service/zhservice.aspx">服 务</a></li>
+					<li><a id="meeting" href="/zhibo/index.aspx">网络研讨会</a></li>
+					<li><a id="guanli" href="/guanli/index.aspx">管理者</a></li>
+					<li><a id="news" href="/news/index.aspx">体验中心</a></li>
+					<li><a id="stock" href="/stock/index.aspx">投资者关系</a></li>
+					<li><a id="about" href="/about/index.aspx">关于用友</a></li>
+					<li><a id="contact" href="/contact/index.aspx">联系用友 </a></li>
+					<li><a href="http://www.yypcos.com" target="_blank">商城</a></li>
+					<div class="clear">	
+					</div>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+	<ul id="bannerlist" class="lunboimg">
+		<li class="current"><a href="http://subject.yonyou.com/2014nianhuihh/" target="_blank"><img src="images/banner2_2014.jpg" width="2000" ></a></li>
+	</ul>
+	<div id="bannerbtndw">
+		<ul id="bannerbtn" class="lunbotab">
+			<li class="current"></li>
+		</ul>
+	</div>
+</div>
+<div id="content">
+	<div id="big" class="mauto current">
+		<dl class="long">
+			<dt>大型企业产品与解决方案</dt>
+			<dd><a href="http://www.yonyou.com/product/NC.aspx" target="_blank">NC6：大型企业管理与电子商务平台</a></dd>
+			<dd><a href="http://www.yonyou.com/Solutions/lingyu_hr.aspx" target="_blank">HCM： 集团人力资本管理解决方案</a></dd>
+			<dd><a href="http://www.yonyou.com/product/UAP_BQ.aspx" target="_blank">BQ—为管理决策提供企业级统一支持</a></dd>
+			<dd><a href="http://www.yonyou.com/Solutions/lingyu_yingxiao.aspx" target="_blank">用友统一营销解决方案</a></dd>
+		</dl>
+		<div class="more"><a href="#">&gt;&gt;</a></div>
+	</div>
+	<div id="mid" class="mauto">
+		<dl class="shot">
+			<dt>中型企业产品与解决方案</dt>
+			<dd><a href="http://www.yonyou.com/product/U8.aspx" target="_blank">U8+：成长型企业管理与...</a></dd>
+		</dl>
+		<div class="more"><a href="#">&gt;&gt;</a></div>
+	</div>
+	<div id="app" class="mauto">
+		<dl class="shot">
+			<dt>企业计算平台</dt>
+			<dd><a href="#">UAP：大型企业与...</a></dd>
+		</dl>
+		<div class="more"><a href="#">&gt;&gt;</a></div>
+	</div>
+	<div id="act" class="mauto">
+		<dl class="shot">
+			<dt>用友动态</dt>
+			<dd><a href="#">【用友UAP技术...</a></dd>
+		</dl>
+		<div class="more"><a href="#">&gt;&gt;</a></div>
+	</div>
+	<div class="clear"></div>
+</div>
+	</div>
+</body>
+</html>
